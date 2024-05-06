@@ -1,0 +1,5 @@
+.movies-search-input::placeholder{
+    color: white;
+    opacity: 0.7;
+    font-weight: bold;
+  }

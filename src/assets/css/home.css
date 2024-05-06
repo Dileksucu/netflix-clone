@@ -1,0 +1,150 @@
+
+/* buradan css eklemeye başladım. */
+/* antd de bulunan özellikleri arka kısmlarında değişikli */
+.ant-select-selector {
+  background-color: #171514 !important;
+  color: white !important;
+  opacity: 0.8;
+}
+
+/* dil select kısmında okun rengi değiştirildi */
+.ant-select-arrow{
+  color: white !important;
+}
+
+#first-section {
+  /* kolon içindeki alanların üstünde yazmak istediğimizde kullanıyor */
+  position: relative; 
+  overflow: hidden;
+}
+
+/* Bu ilk sayfadaki netflix img kısmınının önündeki karartıyı sağlar  --> after yazılmasının amacı bununla ilişkili class*/
+#first-section::after {
+  content: "";
+  display: block;
+  /* üstüne yazıları aldım position ile */
+  position: absolute;  
+  height: auto;
+  overflow: hidden; 
+  /* bütün alanları kaplasın diye bütün alanlaara 0 verdik */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top, 
+    rgba(1, 1, 1, 0.6) 0%, 
+    rgba(1, 1, 1, 0.6) 60%, 
+    rgba(1, 1, 1, 0.9) 100%
+  );
+  pointer-events: none;
+  /* z-index: 2; */
+  /* karatının üstüne çıkmasını sağladım */
+}
+
+
+#content {
+  position: relative; /* Absolute yerine relative kullanılarak içeriğin kapsayıcısına bağlı kalması sağlandı */
+  z-index: 100;
+  max-width: 100%; /* Genişlik maksimum %100 olarak ayarlandı */
+  margin: auto; /* Otomatik margin ile içerik ortalanıyor */
+  padding: 0 15px; /* Sağdan ve soldan padding eklendi */
+  box-sizing: border-box; /* Padding ve border genişliğe dahil ediliyor */
+}
+
+#first-section-input::placeholder{
+  color: white;
+  opacity: 0.7;
+}
+
+/* Second Section --> kart kısmı */ 
+
+/* TV Styles */
+.tv-container {
+  position: relative;
+  width: fit-content; /* Televizyon görselinizin genişliğine uygun olarak ayarlayın */
+}
+
+.tv-image {
+  /* resimin üstünde videoyu vermeyi sağladı */
+  z-index: 100; 
+}
+
+.tv-video {
+  position: absolute;/* videoyu televizyon üzerine koyabilmek için absolute yapılır, yoksa iter birbirini elementler */
+  top: 10%;
+  left: 14%;
+  width: 80%;
+  height: 80%;
+}
+
+.third-text-title{
+  text-align: left !important;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  display: block
+}
+
+.third-section-image{
+  border: 1px solid grey;
+    height: 80px;
+    width: 400px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    bottom: 2%;
+    left: 12%;
+    background-color: black;
+    
+}
+
+.third-section-small-image{
+  height: -webkit-fill-available;
+}
+
+.third-section-text-color{
+  color: #0071eb;
+}
+
+.third-section-gift{
+  width: 3rem;
+    height: 3rem;
+    outline: 2px solid rgb(0, 0, 0);
+    outline-offset: -2px;
+    display: block;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    content: '';
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.four-tv-video {
+  position: absolute;/* videoyu televizyon üzerine koyabilmek için absolute yapılır, yoksa iter birbirini elementler */
+  top: 5%;
+  left: 18%;
+  width: 60%;
+  height: 60%;
+}
+
+.MuiSvgIcon-root  .css-i4bv87-MuiSvgIcon-root{
+  width: 36px;
+  height: 36px;
+  color: white;
+}
+
+.five-section-icons{
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+}
+
+.AccordionSummary:hover {
+  background-color: gray !important ;
+}
+

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MainLayout from './Components/Common/MainLayout'
+import HomePage from './pages/HomePage';
+import { MoviesPage } from './pages/MoviesPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<HomePage />} />{/* "/" url'i çağrıldığında yani ilk defa sayfa çağrılınca "index" şeklinde işaretlediğimizden ilk olarak HomePage çağrılır */}
+              <Route path='/movies' element={<MoviesPage/>} />
+            </Route>
+         </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
